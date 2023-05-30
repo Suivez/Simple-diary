@@ -4,6 +4,11 @@
     </div>
     <ul class="nav navbar-nav">
         <li><a routerLink="">Home</a></li>
-        <li><a routerLink="data-entry">Diary Entry</a></li>
+        <li *ngIf="userAuthenticated"><a routerLink="data-entry">Diary Entry</a></li>
+    </ul>
+    <ul class="nav navbar-nav" style="float: right">
+        <li *ngIf="!userAuthenticated"><a routerLink="login">Login</a></li>
+        <li *ngIf="!userAuthenticated"><a routerLink="sign-up">Sign-Up</a></li>
+        <li *ngIf="userAuthenticated"><a>logout</a></li>
     </ul>
 </div>

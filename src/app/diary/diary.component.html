@@ -4,14 +4,14 @@
         <tr>
             <th>Date</th>
             <th>Entry</th>
-            <th>Action</th>
+            <th *ngIf="isAuthenticated">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let diaryEntry of diaryEntries; let i = index">
             <td>{{diaryEntry.date}}</td>
             <td>{{diaryEntry.entry}}</td>
-            <td>
+            <td *ngIf="isAuthenticated">
                 <button (click)="onEdit(diaryEntry.id)" class="btn btn-light">Edit</button>
                 <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger">Delete</button>
             </td>
