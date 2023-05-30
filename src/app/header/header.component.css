@@ -1,0 +1,15 @@
+.custom-navbar {
+    background-color: hsl(216, 53%, 9%);
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 20px 50px;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+li {
+    color: white;
+}

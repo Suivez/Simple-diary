@@ -128,7 +128,8 @@ app.post('/login', (req, res) => {
 
             const token = jwt.sign({ username: userFound.username, userId: userFound._id }, "secret-string", { expiresIn: "1h" })
             return res.status(200).json({
-                token: token
+                token: token,
+                expiresIn: 3600
             })
         })
         .catch(err => {

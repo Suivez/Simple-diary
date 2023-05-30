@@ -1,4 +1,4 @@
-<div class="navbar navbar-default">
+<div class="navbar navbar-default custom-navbar">
     <div class="navbar-header">
         <a routerLink="" class="navbar-brand">My Diary</a>
     </div>
@@ -9,6 +9,6 @@
     <ul class="nav navbar-nav" style="float: right">
         <li *ngIf="!userAuthenticated"><a routerLink="login">Login</a></li>
         <li *ngIf="!userAuthenticated"><a routerLink="sign-up">Sign-Up</a></li>
-        <li *ngIf="userAuthenticated"><a>logout</a></li>
+        <li *ngIf="userAuthenticated"><button type="submit" style="margin-top: 10px;" (click)="logout()">logout</button></li>
     </ul>
 </div>

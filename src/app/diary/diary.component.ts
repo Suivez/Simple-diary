@@ -31,7 +31,7 @@ export class DiaryComponent implements OnInit, OnDestroy {
       this.diaryEntries = entries;
     });
     this.authenticationSub = this.authService.getAuthenticatedSub().subscribe(status => {
-      
+      this.isAuthenticated = status;
     })
     this.isAuthenticated = this.authService.getIsAuthenticated();
   }
