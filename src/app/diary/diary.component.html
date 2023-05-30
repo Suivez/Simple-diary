@@ -1,6 +1,6 @@
 <div class="main-table">
-    <h2>Welcometo the Diary</h2>
-    <table class="table table-bordered">
+    <h2>Welcome to the Diary</h2>
+    <table>
         <thead>
             <tr>
                 <th>Date</th>
@@ -13,8 +13,8 @@
                 <td>{{diaryEntry.date}}</td>
                 <td>{{diaryEntry.entry}}</td>
                 <td *ngIf="isAuthenticated">
-                    <button (click)="onEdit(diaryEntry.id)" class="btn btn-light">Edit</button>
-                    <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger">Delete</button>
+                    <button (click)="onEdit(diaryEntry.id)" class="btn btn-light btn-edit">Edit</button>
+                    <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger btn-delete">Delete</button>
                 </td>
             </tr>
         </tbody>

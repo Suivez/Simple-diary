@@ -4,12 +4,34 @@
     width: 100%;
     color: white;
     padding: 20px 50px;
+    box-shadow: 3px 26px 24px -22px hsl(216, 53%, 9%);
 }
 
 .navbar-brand {
     color: white;
+    font-size: 2rem;
 }
 
-li {
+.navbar-brand:hover,
+.navbar-nav a:hover {
+    color: hsl(198, 60%, 50%);
+    transition: 0.2s ease;
+}
+
+.navbar-nav a{
     color: white;
+    height: 100%;
+}
+
+button {
+    background-color: hsl(198, 60%, 50%);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+button:hover {
+    background-color: hsla(198, 60%, 50%, 0.8);
+    transition: 0.3s ease;
 }

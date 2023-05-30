@@ -1,7 +1,54 @@
 button {
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .main-table {
     margin: 0px 200px;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+th {
+    background-color: hsl(216, 53%, 9%);
+    border: none;
+    padding: 20px;
+}
+
+td {
+    background-color: hsl(219, 30%, 18%);
+    padding: 20px;
+    font-weight: 400;
+}
+
+tr {
+    box-shadow: 0px 0px 20px -5px hsl(219, 30%, 18%);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1.5em;
+}
+
+.btn-edit {
+    background-color: hsl(198, 60%, 50%);
+}
+
+.btn-edit:hover {
+    background-color: hsla(198, 60%, 50%, 0.8);
+}
+
+.btn-delete {
+    background-color: hsl(0, 100%, 63%);
+}
+
+.btn-delete:hover {
+    background-color: hsla(0, 100%, 63%, 0.8);
+}
+
+button:hover {
+    color: white;
+    transition: 0.3s ease;
 }
