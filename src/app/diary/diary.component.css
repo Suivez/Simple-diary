@@ -11,19 +11,32 @@ h2 {
 }
 
 th {
-    background-color: hsl(216, 53%, 9%);
+    background-color: hsl(219, 30%, 18%);
     border: none;
     padding: 20px;
 }
 
+thead {
+    position: sticky;
+    top: 0px;
+}
+
 td {
-    background-color: hsl(219, 30%, 18%);
+    background-color: hsl(217, 28%, 15%);
     padding: 20px;
     font-weight: 400;
 }
 
+td:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 tr {
-    box-shadow: 0px 0px 20px -5px hsl(219, 30%, 18%);
+    background-color: hsl(217, 28%, 15%);
+    box-shadow: 0px 0px 13px 1px hsl(220, 18%, 10%);
+    height: 100%;
 }
 
 table {
@@ -51,4 +64,20 @@ table {
 button:hover {
     color: white;
     transition: 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .main-table {
+        margin: 0px 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-table {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 30px;
+    }
 }

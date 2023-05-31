@@ -1,20 +1,61 @@
 <div class="main-table">
-    <h2>Welcome to the Diary</h2>
+    <h2>Witaj w My Diary</h2>
     <table>
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Entry</th>
-                <th *ngIf="isAuthenticated">Action</th>
+                <th>Data</th>
+                <th>Wydarzenie</th>
+                <!-- <th *ngIf="isAuthenticated">Edytuj/Usuń</th> -->
+                <th>Edytuj/Usuń</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let diaryEntry of diaryEntries; let i = index">
+            <!-- <tr *ngFor="let diaryEntry of diaryEntries; let i = index">
                 <td>{{diaryEntry.date}}</td>
                 <td>{{diaryEntry.entry}}</td>
                 <td *ngIf="isAuthenticated">
-                    <button (click)="onEdit(diaryEntry.id)" class="btn btn-light btn-edit">Edit</button>
-                    <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger btn-delete">Delete</button>
+                    <button (click)="onEdit(diaryEntry.id)" class="btn btn-light btn-edit">Edytuj</button>
+                    <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger btn-delete">Usuń</button>
+                </td>
+            </tr> -->
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>
+                    <button class="btn btn-light btn-edit">Edytuj</button>
+                    <button class="btn btn-danger btn-delete">Usuń</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>
+                    <button class="btn btn-light btn-edit">Edytuj</button>
+                    <button class="btn btn-danger btn-delete">Usuń</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>
+                    <button class="btn btn-light btn-edit">Edytuj</button>
+                    <button class="btn btn-danger btn-delete">Usuń</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>
+                    <button class="btn btn-light btn-edit">Edytuj</button>
+                    <button class="btn btn-danger btn-delete">Usuń</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>
+                    <button class="btn btn-light btn-edit">Edytuj</button>
+                    <button class="btn btn-danger btn-delete">Usuń</button>
                 </td>
             </tr>
         </tbody>

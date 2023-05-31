@@ -3,12 +3,12 @@
         <div class="col">
             <form (ngSubmit)="onSubmit()" [formGroup]="diaryForm">
                 <div class="form-group">
-                    <label for="date">Date</label>
+                    <label for="date">Data</label>
                     <input type="text" class="form-control" formControlName="date">
-                    <label for="entry">Entry</label>
+                    <label for="entry">Wydarzenie</label>
                     <input type="text" class="form-control" formControlName="entry">
                 </div>
-                <button [disabled]="!diaryForm.valid" class="btn btn-success">Submit</button>
+                <button [disabled]="!diaryForm.valid">Dodaj wydarzenie</button>
             </form>
         </div>
     </div>
