@@ -5,57 +5,16 @@
             <tr>
                 <th>Data</th>
                 <th>Wydarzenie</th>
-                <!-- <th *ngIf="isAuthenticated">Edytuj/Usuń</th> -->
-                <th>Edytuj/Usuń</th>
+                <th *ngIf="isAuthenticated">Edytuj/Usuń</th>
             </tr>
         </thead>
         <tbody>
-            <!-- <tr *ngFor="let diaryEntry of diaryEntries; let i = index">
+            <tr *ngFor="let diaryEntry of diaryEntries; let i = index">
                 <td>{{diaryEntry.date}}</td>
                 <td>{{diaryEntry.entry}}</td>
                 <td *ngIf="isAuthenticated">
                     <button (click)="onEdit(diaryEntry.id)" class="btn btn-light btn-edit">Edytuj</button>
                     <button (click)="onDelete(diaryEntry.id)" class="btn btn-danger btn-delete">Usuń</button>
-                </td>
-            </tr> -->
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>
-                    <button class="btn btn-light btn-edit">Edytuj</button>
-                    <button class="btn btn-danger btn-delete">Usuń</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>
-                    <button class="btn btn-light btn-edit">Edytuj</button>
-                    <button class="btn btn-danger btn-delete">Usuń</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>
-                    <button class="btn btn-light btn-edit">Edytuj</button>
-                    <button class="btn btn-danger btn-delete">Usuń</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>
-                    <button class="btn btn-light btn-edit">Edytuj</button>
-                    <button class="btn btn-danger btn-delete">Usuń</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Lorem ipsum</td>
-                <td>Lorem ipsum</td>
-                <td>
-                    <button class="btn btn-light btn-edit">Edytuj</button>
-                    <button class="btn btn-danger btn-delete">Usuń</button>
                 </td>
             </tr>
         </tbody>
