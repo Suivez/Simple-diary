@@ -51,7 +51,6 @@ app.put('/update-entry/:id', (req, res) => {
 })
 
 app.post("/add-entry", (req, res, next) => {
-
     try{
         const token = req.headers.authorization;
         jwt.verify(token, "secret-string")

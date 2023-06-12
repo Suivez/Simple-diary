@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import { DiaryDataService } from '../shared/diary-data.component';
 import { DiaryEntry } from '../shared/diary-entry.model';
-import {DiaryComponent} from "../diary/diary.component";
 
 @Component({
   selector: 'app-diary-form',
@@ -30,6 +29,7 @@ export class DiaryFormComponent implements OnInit {
         this.editMode = false;
       }
     })
+    
     this.diaryForm = new FormGroup({
       "date": new FormControl(this.editMode ? this.diaryEntry.date : null, [Validators.required]),
       "entry": new FormControl(this.editMode ? this.diaryEntry.entry : null, [Validators.required])
