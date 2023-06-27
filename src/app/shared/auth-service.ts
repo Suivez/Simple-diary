@@ -24,6 +24,7 @@ export class AuthService{
     getToken(){
         return this.token;
     }
+
     constructor(private http: HttpClient, private router: Router){}
 
     signupUser(username: string, password: string){
