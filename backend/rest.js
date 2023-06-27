@@ -19,12 +19,17 @@ mongoose.connect(uri)
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
+    // Serwer informuje klienta jakie domeny uprawnione sa do uzycia odpowiedzi
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    // wskazuje ktore naglowki moga byc uzywane podczas rzeczywistego dzialania
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization"); 
+    // serwer informuje jakie inne czasowniki sa dozwolone
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); 
     next();
 })
 
+
+// usuniecie wydarzenia
 app.delete('/remove-entry/:id', (req, res) => {
     DiaryEntryModel.deleteOne({ _id: req.params.id })
         .then(() => {
@@ -37,6 +42,7 @@ app.delete('/remove-entry/:id', (req, res) => {
         })
 })
 
+// edytowanie wydarzenia
 app.put('/update-entry/:id', (req, res) => {
     const updatedEntry = new DiaryEntryModel({ _id: req.body.id, date: req.body.date, entry: req.body.entry })
     DiaryEntryModel.updateOne({ _id: req.body.id }, updatedEntry)
@@ -50,6 +56,7 @@ app.put('/update-entry/:id', (req, res) => {
         })
 })
 
+// dodanie wydarzenia
 app.post("/add-entry", (req, res, next) => {
     try{
         const token = req.headers.authorization;
@@ -70,6 +77,7 @@ app.post("/add-entry", (req, res, next) => {
     })
 })
 
+// wyswietlenie danych/wydarzen
 app.get('/diary-entries', (req, res, next) => {
     DiaryEntryModel.find()
         .then((data) => {
@@ -80,6 +88,7 @@ app.get('/diary-entries', (req, res, next) => {
         })
 })
 
+// rejestracja
 app.post('/sign-up', (req, res) => {
 
     bcrypt.hash(req.body.password, 10)
@@ -104,6 +113,7 @@ app.post('/sign-up', (req, res) => {
         })
 })
 
+// logowanie
 app.post('/login', (req, res) => {
 
     let userFound;
